@@ -1,0 +1,102 @@
+header {
+    background-color: #F9F6F7;
+    height: 100vh;
+    padding-top: 2em;
+    position: relative;
+}
+
+header>div:first-child {
+    position: relative;
+    z-index: 99;
+}
+
+header>div {
+    width: 30%;
+    margin: 0 auto;
+}
+
+header ul,
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+    cursor: none;
+}
+
+header ul a {
+    font-size: 1.5em;
+    transition: all .5s;
+}
+
+header a:hover {
+    color: #FF971D;
+}
+
+#Matheus-Brum {
+    background-color: #000;
+    color: #fff;
+    width: fit-content;
+    padding: 15px 10px;
+    border-radius: 50%;
+    font-size: 2em !important;
+    margin: 0 auto 1em auto;
+    transition: all .75s;
+}
+
+#Matheus-Brum:hover {
+    background-color: #FF971D;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 15vh;
+    background-color: #F9F6F7;
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    width: fit-content;
+}
+
+footer li {
+    font-size: 3em;
+    width: 50px;
+    margin-right: .25em;
+}
+
+.Dark-Mode header,
+.Dark-Mode Footer {
+    background-color: #393E46;
+}
+
+.Dark-Mode header ul a {
+    color: #EEEEEE;
+}
+
+.Dark-Mode #Matheus-Brum {
+    background-color: #EEEEEE;
+    color: #393E46;
+}
+
+.Dark-Mode header a:hover {
+    color: #FD7014;
+}
+
+.Dark-Mode #Matheus-Brum:hover {
+    background-color: #FD7014;
+}
+
+.Dark-Mode footer svg {
+    fill: #EEEEEE;
+}

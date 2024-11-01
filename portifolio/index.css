@@ -1,0 +1,192 @@
+header .container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bolha {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bolha span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #f1e9e3;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #FFE8D644,
+        0 0 50px #FFE8D6,
+        0 0 100px #FFE8D6;
+    animation: subir-bolha 15s linear infinite;
+    animation-duration: calc(100s/ var(--i));
+}
+
+.bolha span:nth-child(even) {
+    background-color: #0050e6;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #76a2f3,
+        0 0 50px #3675eb,
+        0 0 100px #3675eb;
+}
+
+#Projetos .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.projeto {
+    width: fit-content;
+    height: 35vh;
+    position: relative;
+    background-size: cover;
+}
+
+.projeto:hover div {
+    display: block;
+    margin: 0%;
+    opacity: 1;
+    z-index: 100;
+}
+
+.projeto:hover img {
+    filter: brightness(40%);
+}
+
+.projeto img {
+    max-width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out .02s;
+}
+
+.projeto div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: all .5s ease-in-out .02s;
+    opacity: 0;
+    z-index: -99;
+}
+
+.projeto button {
+    padding: .25em .5em;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: all .2s;
+    margin-top: .25em;
+}
+
+.projeto button:hover {
+    background-color: white;
+    color: black;
+    cursor: none;
+}
+
+#Formulario {
+    max-width: 35%;
+    margin: 0 auto;
+}
+
+
+#Formulario input,
+#Formulario textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.1em;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 5px 12px;
+    font-size: 1.25em;
+    border: 1px solid black;
+}
+
+#Formulario textarea {
+    height: 150px;
+    resize: none;
+}
+
+#Formulario button {
+    padding: .75em 5em;
+    cursor: none;
+}
+
+section {
+    animation: aparecer 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
+}
+
+#Sobre>div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#Sobre img {
+    width: 35vh;
+    height: 35vh;
+    border-radius: 50%;
+}
+
+#Descricao {
+    width: 30%;
+    align-items: center;
+    text-align: justify;
+    margin-right: 5%;
+}
+
+#Descricao h4 {
+    font-size: 1.25em;
+    margin-bottom: .5em;
+}
+
+#Sobre {
+    padding-top: 15vh;
+}
+
+.Dark-Mode {
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+@media (max-width: 425px) {
+
+    #Projetos {
+        padding: 0 5px;
+    }
+
+    #Formulario {
+        min-width: 80% !important;
+        margin: 0 auto;
+    }
+
+    #Descricao {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 1.5em;
+    }
+
+    #Sobre img {
+        width: 80%;
+        height: 20em;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        height: 100vh;
+    }
+}
